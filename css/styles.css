@@ -7,6 +7,69 @@ Website design is aimed for three device types:
 
 
 
+
+/*==========================================
+
+FlexBox Settings
+
+==========================================*/
+.row {
+	display: flex;
+}
+
+/*==========================================
+
+BODY
+
+==========================================*/
+body {
+	background-color: #fafafa;
+	font-family: "open sans";
+}
+
+/*==========================================
+
+HEADER
+
+==========================================*/
+header {
+	text-align: center;
+}
+
+/*==========================================
+
+NAVIGATION
+
+==========================================*/
+nav {
+	margin: 0 auto;
+	text-align: center;
+}
+
+nav ul {
+	padding-left: 0;
+}
+
+nav li {
+	list-style: none;
+	background-color: #fefefe;
+	padding: 5px 0;
+	margin: 5px 0;
+	font-weight: bolder;
+}
+
+/*==========================================
+
+HEADINGS AND TEXT
+
+==========================================*/
+
+p {
+	font-weight: lighter;
+	width: 95%;
+}
+
+
 /*==========================================
 
 MEDIA QUERIES
@@ -15,6 +78,23 @@ MEDIA QUERIES
 
 /* Media Query for Phones */
 @media (max-width: 767px){
+	body {
+		width:90%;
+		margin: 0 auto;
+	}
+	.profilePicture {
+		display: block;
+		width: 75%;
+		margin: 0 auto;
+	}
+	img {
+		max-width: 100%;
+	}
+	p,
+	h2,
+	h3 {
+		text-align: center;
+	}
 	
 }
 

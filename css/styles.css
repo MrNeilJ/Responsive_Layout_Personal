@@ -4,3 +4,26 @@ Website design is aimed for three device types:
 	mobile: anything below 768 pixels
 	tablet: 768px to 1024px
 	computer: 1024px and greater
+
+
+
+/*==========================================
+
+MEDIA QUERIES
+
+==========================================*/
+
+/* Media Query for Phones */
+@media (max-width: 767px){
+	
+}
+
+/* Media Query for Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+	
+}
+
+/* Media Query for Computers */
+@media (min-width: 1024px){
+	
+}

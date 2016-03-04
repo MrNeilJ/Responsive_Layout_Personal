@@ -77,6 +77,10 @@ h3 {
 	padding: 15px 0;
 }
 
+h2 {
+	font-size: 1.2em;
+}
+
 /*==========================================
 
 SECTIONS
@@ -85,6 +89,45 @@ SECTIONS
 section > article {
 	padding-top: 30px;
 }
+article:last-child {
+	padding-bottom: 30px;
+}
+
+.contact {
+	padding-top: 30px;
+}
+
+.contactInfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-left: 0;
+	padding-bottom: 50px;
+}
+
+.contactInfo > li {
+	list-style: none;
+}
+
+.contactInfo > li:first-child {
+	padding-bottom: 20px;
+}
+
+
+/*==========================================
+
+FOOTER
+
+==========================================*/
+footer {
+	display: flex;
+	justify-content: space-between;
+}
+
+footer ul {
+	display: none;
+}
+
 
 
 /*==========================================
@@ -119,10 +162,141 @@ MEDIA QUERIES
 
 /* Media Query for Tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
+	/* HEADING */
+	header {
+		padding-top: 25px;
+	}
+	/* NAVIGATION */
+	nav > ul {
+		display: flex;
+		justify-content: center;
+	}
+	nav > ul > li {
+		background-color: none;
+	}
+	nav > ul > li:nth-child(n+2) {
+		padding-left: 40px;
+	}
+	/*End of Navigation*/
+		
+	/* INTRODUCTION */
+	.introduction {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.introduction .item:first-child {
+		float: right;
+		padding-left: 2%;
+	}
+	.introduction .item:last-child {
+		padding-right: 50px;
+	}
+	.profilePicture {
+		width: 40%;
+	}
+	.introduction p {
+		font-size: 1.2em;
+	}
 	
+	/* IMAGES */
+	img {
+		max-width: 100%;
+	}
+	/* End of Images
+	
+	/* PORTFOLIO */
+	.wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.portfolio > h3 {
+		text-align: center;
+	}
+	.portfolio article {
+		width: 49%;
+		text-align: center;
+	}
+	.portfolio article:nth-child(even){
+		float: left;
+	}
+	.portfolio article:nth-child(odd){
+		float: right;
+	}
+	/* End of Portfolio */
+	
+	/* CONTACT */
+	.contact {
+		text-align: center;
+		width: 80%;
+		margin: 0 auto;
+	}
+	.contact p,
+	.contact .contactInfo {
+		font-size: 1.2em;
+	}
+	.contact p {
+		padding-bottom: 30px;
+	}
+	/* End of Contact
+	
+	/* FOOTER */
+	footer .onlyMobile {
+		display:none;
+	}
+	footer ul {
+		display:flex;
+	}
+	footer ul li {
+		list-style: none;
+		font-weight: bolder;
+	}
+	footer ul li:nth-child(n+2){
+		padding-left: 20px;
+	}
+	footer {
+		padding-bottom: 50px;
+	}
 }
 
 /* Media Query for Computers */
 @media (min-width: 1024px){
 	
+	/* HEADING */
+	.heading {
+		width: 90%;
+		display: flex;
+		margin: 0 auto;
+		justify-content: space-between;
+		padding-top: 25px;
+	}
+	.heading header {
+		margin-right: auto;
+	}
+	.heading nav ul {
+		display: flex;
+		flex-direction: row;
+	}
+	.heading nav {
+		margin-right: 0;
+	}
+	
+	.heading nav ul li {
+		background-color: #fcfcfc;
+	}
+	.heading nav ul li:nth-child(n+2){
+		padding-left:40px;
+	}
+	/* End of Heading */
+	
+	/* INTRODUCTION */
+	
+}
+
+/* CLEAR FIX */
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
 }

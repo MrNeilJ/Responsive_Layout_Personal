@@ -7,7 +7,14 @@ Website design is aimed for three device types:
 
 
 
+/*=========================================
+FULL PAGE SETTINGS
 
+=========================================*/
+
+* {
+	box-sizing: border-box;
+}
 /*==========================================
 
 FlexBox Settings
@@ -23,7 +30,6 @@ BODY
 
 ==========================================*/
 body {
-	background-color: #fafafa;
 	font-family: "open sans";
 }
 
@@ -38,6 +44,8 @@ header {
 
 .heading {
 	padding-bottom: 20px;
+	width: 90%;
+	margin: 0 auto;
 }
 /*==========================================
 
@@ -56,7 +64,6 @@ nav ul {
 
 nav li {
 	list-style: none;
-	background-color: #fefefe;
 	padding: 10px 0;
 	margin: 8px 0;
 	font-weight: bolder;
@@ -80,6 +87,20 @@ h3 {
 h2 {
 	font-size: 1.2em;
 }
+h1 {
+	padding-top: 22px;
+	margin-top: 0;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	color:#c0c0c0;
+}
+h1,h2,h3,h4,a,strong {
+	color: #4a4a4a
+}
 
 /*==========================================
 
@@ -91,6 +112,13 @@ section > article {
 }
 article:last-child {
 	padding-bottom: 30px;
+}
+
+.topSection {
+	padding-bottom: 50px;
+}
+.portfolio {
+	padding-top: 20px;
 }
 
 .contact {
@@ -113,6 +141,25 @@ article:last-child {
 	padding-bottom: 20px;
 }
 
+.topSection {
+	background-color: #fafafa;
+}
+
+.middleSection {
+	background-color: #fff;
+}
+.bottomSection {
+	background-color: #fafafa;
+	width: 100%;
+}
+.contact {
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center
+}
+
+
 
 /*==========================================
 
@@ -122,12 +169,17 @@ FOOTER
 footer {
 	display: flex;
 	justify-content: space-between;
+	width: 90%;
+	margin: 0 auto;
 }
 
 footer ul {
 	display: none;
 }
 
+hr {
+	width: 90%;
+}
 
 
 /*==========================================
@@ -138,7 +190,10 @@ MEDIA QUERIES
 
 /* Media Query for Phones */
 @media (max-width: 767px){
-	body {
+	nav ul li {
+		background-color: #fefefe;
+	}
+	.wrapper {
 		width:90%;
 		margin: 0 auto;
 	}
@@ -159,26 +214,20 @@ MEDIA QUERIES
 	}
 	
 }
-
-/* Media Query for Tablets */
-@media (min-width: 768px) and (max-width: 1023px) {
+/* Media Query for both Tablets and Computers */
+@media (min-width: 768px) {
 	/* HEADING */
 	header {
 		padding-top: 25px;
 	}
-	/* NAVIGATION */
-	nav > ul {
-		display: flex;
-		justify-content: center;
+	.heading {
+		padding-bottom: 0;
 	}
-	nav > ul > li {
-		background-color: none;
+	nav {
+		padding-bottom: 0;
 	}
-	nav > ul > li:nth-child(n+2) {
-		padding-left: 40px;
-	}
-	/*End of Navigation*/
-		
+	
+	
 	/* INTRODUCTION */
 	.introduction {
 		width: 90%;
@@ -186,7 +235,9 @@ MEDIA QUERIES
 	}
 	.introduction .item:first-child {
 		float: right;
-		padding-left: 2%;
+	}
+	.heading nav ul {
+		display: flex;
 	}
 	.introduction .item:last-child {
 		padding-right: 50px;
@@ -194,10 +245,6 @@ MEDIA QUERIES
 	.profilePicture {
 		width: 40%;
 	}
-	.introduction p {
-		font-size: 1.2em;
-	}
-	
 	/* IMAGES */
 	img {
 		max-width: 100%;
@@ -213,26 +260,13 @@ MEDIA QUERIES
 		text-align: center;
 	}
 	.portfolio article {
-		width: 49%;
 		text-align: center;
 	}
-	.portfolio article:nth-child(even){
-		float: left;
-	}
-	.portfolio article:nth-child(odd){
-		float: right;
-	}
-	/* End of Portfolio */
 	
 	/* CONTACT */
 	.contact {
 		text-align: center;
-		width: 80%;
 		margin: 0 auto;
-	}
-	.contact p,
-	.contact .contactInfo {
-		font-size: 1.2em;
 	}
 	.contact p {
 		padding-bottom: 30px;
@@ -240,6 +274,11 @@ MEDIA QUERIES
 	/* End of Contact
 	
 	/* FOOTER */
+	footer {
+		width: 90%;
+		margin: 0 auto;
+		
+	}
 	footer .onlyMobile {
 		display:none;
 	}
@@ -253,13 +292,79 @@ MEDIA QUERIES
 	footer ul li:nth-child(n+2){
 		padding-left: 20px;
 	}
+	hr {
+		margin-top: 0;
+	}
+	/* End of Footer */
+}
+/* Media Query for Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+	/* NAVIGATION */
+	nav > ul {
+		justify-content: center;
+	}
+	nav > ul > li:nth-child(n+2) {
+		padding-left: 40px;
+	}
+	.heading nav ul li {
+		background-color: none;
+	}
+	/*End of Navigation*/
+		
+	/* INTRODUCTION */
+	.introduction .item:first-child {
+		padding-left: 2%;
+	}
+	.introduction p {
+		font-size: 1.2em;
+	}
+	
+	/* PORTFOLIO */
+	.portfolio article {
+		width: 49%;
+	}
+	.portfolio article:nth-child(even){
+		float: left;
+		clear: both;
+	}
+	.portfolio article:nth-child(odd){
+		float: right;
+	}
+	/* End of Portfolio */
+	
+	/* CONTACT */
+	.contact {
+		width: 80%;
+	}
+	.contact p,
+	.contact .contactInfo {
+		font-size: 1.2em;
+	}
+	/* End of Contact
+	
+	/* FOOTER */
 	footer {
 		padding-bottom: 50px;
 	}
+	/* End of Footer */
+	
 }
 
 /* Media Query for Computers */
 @media (min-width: 1024px){
+	/* Body Width on computers */
+	body {
+		margin: 0 auto;
+	}
+	.heading,
+	.wrapper,
+	.contact,
+	.introduction,
+	hr,
+	footer {
+		max-width: 1200px;
+	}
+	/* End of Body Information */
 	
 	/* HEADING */
 	.heading {
@@ -267,13 +372,12 @@ MEDIA QUERIES
 		display: flex;
 		margin: 0 auto;
 		justify-content: space-between;
-		padding-top: 25px;
+		align-items: baseline;
 	}
 	.heading header {
 		margin-right: auto;
 	}
 	.heading nav ul {
-		display: flex;
 		flex-direction: row;
 	}
 	.heading nav {
@@ -281,50 +385,28 @@ MEDIA QUERIES
 	}
 	
 	.heading nav ul li {
-		background-color: #fcfcfc;
+		background-color: none;
+		font-size: 1.2em;
 	}
 	.heading nav ul li:nth-child(n+2){
 		padding-left:40px;
 	}
 	/* End of Heading */
 	
+	
 	/* INTRODUCTION */
-	.introduction {
-		width: 90%;
-		margin: 0 auto;
-	}
 	.introduction .item:first-child {
-		float: right;
 		padding-left: 5%;
 	}
-	.introduction .item:last-child {
-		padding-right: 50px;
-	}
-	.profilePicture {
-		width: 40%;
-	}
 	.introduction p {
-		font-size: 1.2em;
+		font-size: 1.3em;
 	}
 	/* End of Introduction */
 	
-	/* IMAGES */
-	img {
-		max-width: 100%;
-	}
-	/* End of Images
 	
 	/* PORTFOLIO */
-	.wrapper {
-		width: 90%;
-		margin: 0 auto;
-	}
-	.portfolio > h3 {
-		text-align: center;
-	}
 	.portfolio article {
 		width: 32%;
-		text-align: center;
 	}
 	.portfolio article{
 		float: left;
@@ -335,42 +417,25 @@ MEDIA QUERIES
 	.portfolio article:nth-child(3n + 0) {
 		padding-left: 2%;
 	}
+	.portfolio article:nth-child(3n + 2) {
+		clear: both;
+		padding-left: 2%;
+	}
 	/* End of Portfolio */
 	
 	/* CONTACT */
 	.contact {
-		text-align: center;
 		width: 70%;
-		margin: 0 auto;
 	}
 	.contact p,
 	.contact .contactInfo {
 		font-size: 1.4em;
 	}
-	.contact p {
-		padding-bottom: 30px;
-	}
 	/* End of Contact
 	
 	/* FOOTER */
-	footer .onlyMobile {
-		display:none;
-	}
-	footer ul {
-		display:flex;
-	}
-	footer ul li {
-		list-style: none;
-		font-weight: bolder;
-	}
-	footer ul li:nth-child(n+2){
-		padding-left: 20px;
-	}
 	
-	body {
-		max-width: 1200px;
-		margin: 0 auto;
-	}
+	/* End of Footer */
 }
 
 /* CLEAR FIX */

@@ -114,9 +114,6 @@ article:last-child {
 	padding-bottom: 30px;
 }
 
-.topSection {
-	padding-bottom: 50px;
-}
 .portfolio {
 	padding-top: 20px;
 }
@@ -143,6 +140,7 @@ article:last-child {
 }
 
 .topSection {
+	padding-bottom: 50px;
 	background-color: #fafafa;
 }
 
@@ -303,7 +301,7 @@ MEDIA QUERIES
 		padding-left: 40px;
 	}
 	.heading nav ul li {
-		background-color: none;
+		background-color: #fafafa;
 	}
 	/*End of Navigation*/
 		
@@ -381,7 +379,7 @@ MEDIA QUERIES
 	}
 	
 	.heading nav ul li {
-		background-color: none;
+		background-color: #fafafa;
 		font-size: 1.2em;
 	}
 	.heading nav ul li:nth-child(n+2){

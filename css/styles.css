@@ -21,6 +21,9 @@ FlexBox Settings
 
 ==========================================*/
 .row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -161,7 +164,13 @@ FOOTER
 
 ==========================================*/
 footer {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	width: 90%;
 	margin: 0 auto;
@@ -231,6 +240,9 @@ MEDIA QUERIES
 		float: right;
 	}
 	.heading nav ul {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
 		display: flex;
 	}
 	.introduction .item:last-child {
@@ -277,6 +289,9 @@ MEDIA QUERIES
 		display:none;
 	}
 	footer ul {
+		display:-webkit-box;
+		display:-webkit-flex;
+		display:-ms-flexbox;
 		display:flex;
 	}
 	footer ul li {
@@ -295,6 +310,9 @@ MEDIA QUERIES
 @media (min-width: 768px) and (max-width: 1023px) {
 	/* NAVIGATION */
 	nav > ul {
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
 		justify-content: center;
 	}
 	nav > ul > li:nth-child(n+2) {
@@ -363,15 +381,28 @@ MEDIA QUERIES
 	/* HEADING */
 	.heading {
 		width: 90%;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
 		display: flex;
 		margin: 0 auto;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
 		justify-content: space-between;
+		-webkit-box-align: baseline;
+		-webkit-align-items: baseline;
+		-ms-flex-align: baseline;
 		align-items: baseline;
 	}
 	.heading header {
 		margin-right: auto;
 	}
 	.heading nav ul {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
 		flex-direction: row;
 	}
 	.heading nav {

@@ -1,0 +1,474 @@
+/* THINGS TO NOTE
+
+Website design is aimed for three device types:
+	mobile: anything below 768 pixels
+	tablet: 768px to 1024px
+	computer: 1024px and greater
+
+
+
+/*=========================================
+FULL PAGE SETTINGS
+
+=========================================*/
+
+* {
+	box-sizing: border-box;
+}
+/*==========================================
+
+FlexBox Settings
+
+==========================================*/
+.row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+/*==========================================
+
+BODY
+
+==========================================*/
+body {
+	font-family: "open sans";
+}
+
+/*==========================================
+
+HEADER
+
+==========================================*/
+header {
+	text-align: center;
+}
+
+.heading {
+	padding-bottom: 20px;
+	width: 90%;
+	margin: 0 auto;
+}
+/*==========================================
+
+NAVIGATION
+
+==========================================*/
+nav {
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 35px;
+}
+
+nav ul {
+	padding-left: 0;
+}
+
+nav li {
+	list-style: none;
+	padding: 10px 0;
+	margin: 8px 0;
+	font-weight: bolder;
+}
+
+/*==========================================
+
+HEADINGS AND TEXT
+
+==========================================*/
+
+p {
+	font-weight: lighter;
+	width: 92%;
+}
+
+h3 {
+	padding: 15px 0;
+}
+
+h2 {
+	font-size: 1.2em;
+}
+h1 {
+	padding-top: 22px;
+	margin-top: 0;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	color:#c0c0c0;
+}
+h1,h2,h3,h4,a,strong {
+	color: #4a4a4a
+}
+
+/*==========================================
+
+SECTIONS
+
+==========================================*/
+section > article {
+	padding-top: 30px;
+}
+article:last-child {
+	padding-bottom: 30px;
+}
+
+.portfolio {
+	padding-top: 20px;
+}
+
+.contact {
+	padding-top: 30px;
+	
+}
+.contact p {
+	width: 100%;
+}
+
+.contactInfo {
+	padding-left: 0;
+	padding-bottom: 50px;
+}
+
+.contactInfo > li {
+	list-style: none;
+}
+
+.contactInfo > li:first-child {
+	padding-bottom: 20px;
+}
+
+.topSection {
+	padding-bottom: 50px;
+	background-color: #fafafa;
+}
+
+.middleSection {
+	background-color: #fff;
+}
+.bottomSection {
+	background-color: #fafafa;
+	width: 100%;
+}
+
+
+
+
+/*==========================================
+
+FOOTER
+
+==========================================*/
+footer {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	width: 90%;
+	margin: 0 auto;
+}
+
+footer ul {
+	display: none;
+}
+
+hr {
+	width: 90%;
+}
+
+
+/*==========================================
+
+MEDIA QUERIES
+
+==========================================*/
+
+/* Media Query for Phones */
+@media (max-width: 767px){
+	nav ul li {
+		background-color: #fefefe;
+	}
+	.wrapper {
+		width:90%;
+		margin: 0 auto;
+	}
+	.profilePicture {
+		display: block;
+		width: 70%;
+		margin: 0 auto;
+	}
+	img {
+		max-width: 100%;
+	}
+	p,
+	h2,
+	h3 {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	
+}
+/* Media Query for both Tablets and Computers */
+@media (min-width: 768px) {
+	/* HEADING */
+	header {
+		padding-top: 25px;
+	}
+	.heading {
+		padding-bottom: 0;
+	}
+	nav {
+		padding-bottom: 0;
+	}
+	
+	
+	/* INTRODUCTION */
+	.introduction {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.introduction .item:first-child {
+		float: right;
+	}
+	.heading nav ul {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	.introduction .item:last-child {
+		padding-right: 50px;
+	}
+	.profilePicture {
+		width: 40%;
+	}
+	/* IMAGES */
+	img {
+		max-width: 100%;
+	}
+	/* End of Images
+	
+	/* PORTFOLIO */
+	.wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.portfolio > h3 {
+		text-align: center;
+	}
+	.portfolio article {
+		text-align: center;
+	}
+	
+	/* CONTACT */
+	.contact {
+		text-align: center;
+		margin: 0 auto;
+	}
+	.contact p {
+		padding-bottom: 30px;
+	}
+	/* End of Contact
+	
+	/* FOOTER */
+	footer {
+		width: 90%;
+		margin: 0 auto;
+		
+	}
+	footer .onlyMobile {
+		display:none;
+	}
+	footer ul {
+		display:-webkit-box;
+		display:-webkit-flex;
+		display:-ms-flexbox;
+		display:flex;
+	}
+	footer ul li {
+		list-style: none;
+		font-weight: bolder;
+	}
+	footer ul li:nth-child(n+2){
+		padding-left: 20px;
+	}
+	hr {
+		margin-top: 0;
+	}
+	/* End of Footer */
+}
+/* Media Query for Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+	/* NAVIGATION */
+	nav > ul {
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+	nav > ul > li:nth-child(n+2) {
+		padding-left: 40px;
+	}
+	.heading nav ul li {
+		background-color: #fafafa;
+	}
+	/*End of Navigation*/
+		
+	/* INTRODUCTION */
+	.introduction .item:first-child {
+		padding-left: 2%;
+	}
+	.introduction p {
+		font-size: 1.2em;
+	}
+	
+	/* PORTFOLIO */
+	.portfolio article {
+		width: 49%;
+	}
+	.portfolio article:nth-child(even){
+		float: left;
+		clear: both;
+	}
+	.portfolio article:nth-child(odd){
+		float: right;
+	}
+	/* End of Portfolio */
+	
+	/* CONTACT */
+	.contact {
+		width: 80%;
+	}
+	.contact p,
+	.contact .contactInfo {
+		font-size: 1.2em;
+	}
+	/* End of Contact
+	
+	/* FOOTER */
+	footer {
+		padding-bottom: 50px;
+	}
+	/* End of Footer */
+	
+}
+
+/* Media Query for Computers */
+@media (min-width: 1024px){
+	/* Body Width on computers */
+	body {
+		margin: 0 auto;
+	}
+	.heading,
+	.wrapper,
+	.contact,
+	.introduction,
+	hr,
+	footer {
+		max-width: 1200px;
+	}
+	/* End of Body Information */
+	
+	/* HEADING */
+	.heading {
+		width: 90%;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		margin: 0 auto;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-box-align: baseline;
+		-webkit-align-items: baseline;
+		-ms-flex-align: baseline;
+		align-items: baseline;
+	}
+	.heading header {
+		margin-right: auto;
+	}
+	.heading nav ul {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+	.heading nav {
+		margin-right: 0;
+	}
+	
+	.heading nav ul li {
+		background-color: #fafafa;
+		font-size: 1.2em;
+	}
+	.heading nav ul li:nth-child(n+2){
+		padding-left:40px;
+	}
+	/* End of Heading */
+	
+	
+	/* INTRODUCTION */
+	.introduction .item:first-child {
+		padding-left: 5%;
+	}
+	.introduction p {
+		font-size: 1.3em;
+	}
+	/* End of Introduction */
+	
+	
+	/* PORTFOLIO */
+	.portfolio article {
+		width: 32%;
+	}
+	.portfolio article{
+		float: left;
+	}
+	.portfolio article:nth-child(3n + 1) {
+		padding-left: 2%;
+	}
+	.portfolio article:nth-child(3n + 0) {
+		padding-left: 2%;
+	}
+	.portfolio article:nth-child(3n + 2) {
+		clear: both;
+		padding-left: 2%;
+	}
+	/* End of Portfolio */
+	
+	/* CONTACT */
+	.contact {
+		width: 70%;
+		text-align: center;
+	}
+	.contact p,
+	.contact .contactInfo {
+		font-size: 1.4em;
+	}
+	/* End of Contact
+	
+	/* FOOTER */
+	
+	/* End of Footer */
+}
+
+/* CLEAR FIX */
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}

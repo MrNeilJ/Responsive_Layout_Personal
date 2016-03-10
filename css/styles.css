@@ -50,6 +50,10 @@ p {
 	font-weight: lighter;
 }
 
+h1,h2,h3,h4,a,strong, p {
+	color: #4a4a4a
+}
+
 
 /*==========================================
 
@@ -92,7 +96,6 @@ nav.main-nav ul li {
 
 nav.main-nav ul li a {
 	text-decoration: none;
-	color: #000;
 }
 
 nav.main-nav ul li a:hover {
@@ -187,6 +190,14 @@ section.contact ul li {
 	padding: 5px 0;
 }
 
+section.contact a {
+	text-decoration: none;
+}
+
+section.contact a:hover {
+	color: #79CDCD;
+}
+
 
 /*==========================================
 
@@ -211,7 +222,6 @@ footer ul {
 
 footer a {
 	text-decoration: none;
-	color: #000;
 }
 
 footer a:hover {
@@ -318,7 +328,6 @@ Footer
 	}
 	footer ul li a {
 		text-decoration: none;
-		color: #000;
 		font-weight: bolder;
 		padding: 7px;
 	}

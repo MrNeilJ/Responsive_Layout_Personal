@@ -54,7 +54,7 @@ NAVIGATION
 ==========================================*/
 .topSection {
 	
-	background-color: aquamarine;
+	background-color: #fafafa;
 }
 
 .heading {
@@ -89,6 +89,11 @@ nav.main-nav ul li {
 nav.main-nav ul li a {
 	text-decoration: none;
 	color: #000;
+}
+
+nav.main-nav ul li a:hover {
+	text-decoration: none;
+	color: #79CDCD;
 }
 
 
@@ -154,7 +159,7 @@ CONTACT
 
 ==========================================*/
 .bottomSection {
-	background-color: aquamarine;
+	background-color: #fafafa;
 }
 
 section.contact {
@@ -196,6 +201,14 @@ footer ul {
 	display: none;
 }
 
+footer a {
+	text-decoration: none;
+	color: #000;
+}
+footer a:hover {
+		color: #79CDCD;
+	}
+
 
 /*==========================================
 
@@ -217,6 +230,7 @@ Navigation
 	}
 	nav {
 		width: 80%;
+		font-size: 1.1em;
 	}
 	nav.main-nav ul {
 		flex-direction: row;
@@ -225,7 +239,7 @@ Navigation
 	nav.main-nav ul li{
 		flex: 0 0 15%;
 		padding: 0 10px;
-		background-color: aquamarine;
+		background-color: #fafafa;
 	}
 	
 /*=================
@@ -235,7 +249,7 @@ Introduction
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
-		padding-bottom: 30px;
+		padding-bottom: 100px;
 	}
 	
 	.introduction p {
@@ -243,14 +257,14 @@ Introduction
 		flex: 1 0 50%;
 		margin-top: 0;
 		padding-top: 0;
-		padding-right: 5%;
+		padding-right: 4%;
 		
 		font-size: 1.2em;
 		text-align: left;
 	}
 	.introduction div {
 		order: 2;
-		flex:  1 0 20%;
+		flex:  1 0 35%;
 	}
 	.introduction div img {
 		width: 100%;
@@ -266,7 +280,15 @@ Portfolio
 	section.portfolio article {
 	flex: 1 0 45%;
 	padding-right: 10px;
+	padding-bottom: 50px;
 	}
+	
+	section article p {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 		
 /*=================
 Contact
@@ -275,6 +297,10 @@ Contact
 	.contact ul {
 		width: 70%;
 		font-size: 1.1em;
+	}
+	.contactInfo ul li {
+		padding-top: 20px;
+		padding-bottom: 20px;
 	}
 	
 /*=================
@@ -295,9 +321,7 @@ Footer
 		font-weight: bolder;
 		padding: 7px;
 	}
-	footer ul li a:hover {
-		color: #eee;
-	}
+	
 	
 }
 
@@ -350,14 +374,10 @@ Contact
 		font-size: 1.3em;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
+@media (min-width:1200px) {
+	.introduction p {
+		font-size: 1.4em;
+	}
 }
 
 

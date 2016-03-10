@@ -6,6 +6,7 @@ FULL PAGE SETTINGS
 * {
 	box-sizing: border-box;
 }
+
 .heading,
 .introduction,
 .wrapper,
@@ -14,23 +15,25 @@ hr,
 footer {
 	max-width: 1200px;
 }
+
+
 /*==========================================
 
 FlexBox Settings
 
 ==========================================*/
+
 .row {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 }
+
 
 /*==========================================
 
 FONTS and HEADERS
 
 ==========================================*/
+
 body {
 	font-family: "open sans";
 }
@@ -47,20 +50,21 @@ p {
 	font-weight: lighter;
 }
 
+
 /*==========================================
 
 NAVIGATION
 
 ==========================================*/
+
 .topSection {
-	
 	background-color: #fafafa;
 }
 
 .heading {
 	width: 90%;
 	margin: 0 auto;
-	display:flex;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
@@ -83,7 +87,7 @@ nav.main-nav ul li {
 	background-color: #fff;
 	padding: 10px;
 	margin: 3px;
-	width:100%;
+	width: 100%;
 }
 
 nav.main-nav ul li a {
@@ -102,16 +106,17 @@ nav.main-nav ul li a:hover {
 INTRODUCTION
 
 ==========================================*/
+
 .introduction {
 	margin: 0 auto;
 	width: 90%;
 	padding: 20px 0;
 }
+
 .introduction img {
 	width: 70%;
 	display: block;
 	margin: 0 auto;
-	
 }
 
 .introduction p {
@@ -120,16 +125,17 @@ INTRODUCTION
 }
 
 
-
 /*==========================================
 
 PORTFOLIO
 
 ==========================================*/
+
 .wrapper {
 	width: 90%;
 	margin: 0 auto;
 }
+
 section.portfolio {
 	display: flex;
 	flex-wrap: wrap;
@@ -144,7 +150,6 @@ section.portfolio h3 {
 section.portfolio article {
 	flex: 1 0 100%;
 	padding-bottom: 20px;
-	
 }
 
 section.portfolio img {
@@ -152,12 +157,12 @@ section.portfolio img {
 }
 
 
-
 /*==========================================
 
 CONTACT
 
 ==========================================*/
+
 .bottomSection {
 	background-color: #fafafa;
 }
@@ -176,10 +181,12 @@ section.contact ul {
 	padding-left: 0;
 	text-align: center;
 }
+
 section.contact ul li {
 	list-style: none;
 	padding: 5px 0;
 }
+
 
 /*==========================================
 
@@ -197,6 +204,7 @@ footer {
 	display: flex;
 	justify-content: space-between;
 }
+
 footer ul {
 	display: none;
 }
@@ -205,9 +213,10 @@ footer a {
 	text-decoration: none;
 	color: #000;
 }
+
 footer a:hover {
-		color: #79CDCD;
-	}
+	color: #79CDCD;
+}
 
 
 /*==========================================
@@ -216,14 +225,15 @@ MEDIA QUERIES
 
 ==========================================*/
 
+
 /*Media Query for Tablets and bigger*/
 
 @media (min-width:768px) {
-/*=================
+	/*=================
 Navigation
 =================*/
 	.heading {
-	padding-top: 20px;	
+		padding-top: 20px;
 	}
 	.heading header h1 {
 		padding-bottom: 10px;
@@ -236,13 +246,12 @@ Navigation
 		flex-direction: row;
 		justify-content: center;
 	}
-	nav.main-nav ul li{
+	nav.main-nav ul li {
 		flex: 0 0 15%;
 		padding: 0 10px;
 		background-color: #fafafa;
 	}
-	
-/*=================
+	/*=================
 Introduction
 =================*/
 	.introduction {
@@ -251,46 +260,39 @@ Introduction
 		align-items: flex-start;
 		padding-bottom: 100px;
 	}
-	
 	.introduction p {
-		order 1;
+		order: 1;
 		flex: 1 0 50%;
 		margin-top: 0;
 		padding-top: 0;
 		padding-right: 4%;
-		
 		font-size: 1.2em;
 		text-align: left;
 	}
 	.introduction div {
 		order: 2;
-		flex:  1 0 35%;
+		flex: 1 0 35%;
 	}
 	.introduction div img {
 		width: 100%;
 	}
-	
-/*=================
+	/*=================
 Portfolio
 =================*/
 	h3 {
 		flex: 1 0 100%;
 	}
-	
 	section.portfolio article {
-	flex: 1 0 45%;
-	padding-right: 10px;
-	padding-bottom: 50px;
+		flex: 1 0 45%;
+		padding-right: 10px;
+		padding-bottom: 50px;
 	}
-	
 	section article p {
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-		
-/*=================
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/*=================
 Contact
 =================*/
 	.contact p,
@@ -302,8 +304,7 @@ Contact
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
-	
-/*=================
+	/*=================
 Footer
 =================*/
 	.onlyMobile {
@@ -321,67 +322,55 @@ Footer
 		font-weight: bolder;
 		padding: 7px;
 	}
-	
-	
 }
 
 
 /*Media Query for Computer*/
+
 @media (min-width:1024px) {
-/*=================
+	/*=================
 Heading / Navigation
-=================*/	
+=================*/
 	.heading {
 		flex-direction: row;
 		justify-content: space-between;
 		padding: 35px 0 10px 0;
 	}
-	
 	nav {
 		width: initial;
 	}
-	
-/*=================
+	/*=================
 Introduction
-=================*/	
+=================*/
 	.introduction p {
 		font-size: 1.3em;
 		flex: 1 0 45%
 	}
-	
 	.introduction div {
-		flex:  1 0 25%;
+		flex: 1 0 25%;
 	}
-	
 	.introduction {
 		padding-bottom: 60px;
 	}
-	
-/*=================
+	/*=================
 Portfolio
-=================*/	
+=================*/
 	section.portfolio article {
-	flex: 1 0 33%;
-	padding-right: 15px;
+		flex: 1 0 33%;
+		padding-right: 15px;
 	}
-	
-/*=================
+	/*=================
 Contact
-=================*/		
+=================*/
 	.contact p,
 	.contact ul {
 		width: 60%;
 		font-size: 1.3em;
 	}
-	
+}
+
 @media (min-width:1200px) {
 	.introduction p {
 		font-size: 1.4em;
 	}
 }
-
-
-
-
-
-
